@@ -15,9 +15,11 @@
         write(*,*)' There was a problem opening the input file.'
         goto 999
       endIf
+
+!     I CHANGED THE READ PROCESS TO A MORE COMPACT ONE
+
       do i = 1,3
-!     I CHANGED THE READ PROCESS TO A MORE SIMPLIFIED ONE
-        read(inFileUnitA,*) matrixInA(i,:)
+        read(inFileUnitA,*) matrixInA(:,i)
       endDo
       close(inFileUnitA)
 !     Call the subroutine PrintMatrix to print matrixInA.
@@ -39,9 +41,9 @@
 !     Do the printing job.
       write(*,*)' Printing Matrix'
 !     My code to print the matrix
-      do i=1,3
+      Do i=1,3
         write(*,1000) matrix(i,:)
       endDo
-      
+
       return
       End Subroutine PrintMatrix3x3

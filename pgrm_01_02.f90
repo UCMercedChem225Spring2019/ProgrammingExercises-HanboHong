@@ -16,8 +16,8 @@
         goto 999
       endIf
       do i = 1,3
-!     I CHANGED THE READ PROCESS TO A MORE SIMPLIFIED ONE
-        read(inFileUnitA,*) matrixInA(i,:)
+!     I CHANGED THE READ PROCESS TO A MORE COMPACT ONE
+        read(inFileUnitA,*) matrixInA(:,i)
       endDo
       close(inFileUnitA)
 !
@@ -28,7 +28,7 @@
         goto 999
       endIf
       do i = 1,3
-        read(inFileUnitB,*) matrixInB(i,:)
+        read(inFileUnitB,*) matrixInB(:,i)
       endDo
       close(inFileUnitB)
 !      
