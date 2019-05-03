@@ -113,8 +113,3 @@
 !
       Return
       End Subroutine Print_Matrix_Full_Real
-
-
-
-
-
